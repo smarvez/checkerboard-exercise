@@ -9,10 +9,14 @@ for  (var i = 0; i < 81; i++) {
   tile.style.float = 'left';
   tile.style.paddingBottom = '11.1%';
 
-  if (i%2 === 0) {
-    tile.style.backgroundColor = "red";
-  } else {
-    tile.style.backgroundColor = "black";
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
   }
+  tile.style.backgroundColor = getRandomColor();
 }
 // Your JS goes here
