@@ -1,7 +1,12 @@
+var gradient = document.createElement('div');
+gradient.style.backgroundColor = '#3d5e91';
+
+document.body.appendChild(gradient);
 
 for  (var i = 0; i < 81; i++) {
   var tile = document.createElement('div');
   var body = document.getElementsByTagName('body')[0];
+  var gradient = document.getElementsByTagName('body')[0];
 
   document.body.prepend(tile);
 
@@ -9,14 +14,9 @@ for  (var i = 0; i < 81; i++) {
   tile.style.float = 'left';
   tile.style.paddingBottom = '11.1%';
 
-  function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+  if (i % 2 === 0) {
+    tile.style.backgroundColor = ('black');
   }
-  tile.style.backgroundColor = getRandomColor();
+  var gradient = document.getElementsByTagName('body')[0];
+  gradient.style.background = "linear-gradient(to bottom,green,teal,blue,indigo,violet, magenta)";
 }
-// Your JS goes here
